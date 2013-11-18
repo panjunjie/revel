@@ -209,7 +209,7 @@ func (r RenderJsonResult) Apply(req *Request, resp *Response) {
 	}
 
 	if r.callback == "" {
-		resp.WriteHeader(http.StatusOK, "application/json")
+		resp.WriteHeader(http.StatusOK, "application/json;charset=utf-8")
 		resp.Out.Write(b)
 		return
 	}
